@@ -127,7 +127,7 @@ def ndvi(img,
     ax.patch.set_alpha(0.0)
 
     axes_img = ax.imshow(arr_ndvi,
-                         cmap=plt.cm.spectral, 
+                         cmap=plt.cm.Spectral, 
                          vmin = vmin,
                          vmax = vmax,
                          aspect = 'equal',
@@ -149,7 +149,7 @@ def ndvi(img,
         normed = False
         #plot the Red histogram
         x = arrR.ravel()
-        a = plt.axes([.05,.80,.18,.18], axisbg='y')
+        a = plt.axes([.05,.80,.18,.18], facecolor='y')
         bins=numpy.arange(0,255,8)
         n, bins, patches = plt.hist(x, bins, normed = normed, linewidth=.2)
         plt.setp(patches, 'facecolor', 'r', 'alpha', 0.75)
@@ -159,7 +159,7 @@ def ndvi(img,
 
         #plot the Green histogram
         x = arrG.ravel()
-        a = plt.axes([.05,.55,.18,.18], axisbg='y')
+        a = plt.axes([.05,.55,.18,.18], facecolor='y')
         bins=numpy.arange(0,255,8)
         n, bins, patches = plt.hist(x, bins, normed = normed, linewidth=.2)
         plt.setp(patches, 'facecolor', 'g', 'alpha', 0.75)
@@ -169,7 +169,7 @@ def ndvi(img,
 
         #plot the Blue histogram
         x = arrB.ravel()
-        a = plt.axes([.05,.3,.18,.18], axisbg='y')
+        a = plt.axes([.05,.3,.18,.18], facecolor='y')
         bins = numpy.arange(0,255,8)
         n, bins, patches = plt.hist(x, bins, normed = normed, linewidth=.2)
         plt.setp(patches, 'facecolor', 'b', 'alpha', 0.75)
@@ -179,7 +179,7 @@ def ndvi(img,
 
         #plot the NDVI histogram
         x = arr_ndvi.ravel()
-        a = plt.axes([.05,.05,.18,.18], axisbg='y')
+        a = plt.axes([.05,.05,.18,.18], facecolor='y')
         bins = numpy.arange(-1,1,.01)
         n, bins, patches = plt.hist(x, bins, normed = normed, linewidth=.2)
         plt.setp(patches, 'facecolor', 'w', 'alpha', 0.75)
